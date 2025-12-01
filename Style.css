@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding: 20px;
+    font-family: sans-serif;
+}
+
+.grid-container{
+    display: grid;
+    gap: 15px;
+}
+
+/* Common box style */
+.box{
+    background: #c9c9c9;
+    padding: 40px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===============================
+   📱 Screen: 640–1023 (Tablet)
+================================= */
+@media (min-width: 640px) and (max-width: 1023px){
+    .grid-container{
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .b1{ grid-column: span 4; grid-row: span 3; }
+    .b2{ grid-column: span 2; grid-row: span 1; }
+    .b3{ grid-column: span 2; grid-row: span 2; }
+    .b4{ grid-column: span 2; grid-row: span 2; }
+    .b5{ grid-column: span 2; grid-row: span 2; }
+    .b6{ grid-column: span 4; grid-row: span 4; }
+    .b7{ grid-column: span 4; grid-row: span 3; }
+    .b8{ grid-column: span 2; grid-row: span 2; }
+    .b9{ grid-column: span 2; grid-row: span 2; }
+    .b10, .b11, .b12, .b13, .b14, .b15{
+        display: none; /* Hidden for this breakpoint */
+    }
+}
+
+/* ===============================
+   🖥️ Screen: 1024+ (Desktop)
+================================= */
+@media (min-width: 1024px){
+    .grid-container{
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .b1{ grid-column: span 7; grid-row: span 4; }
+    .b2{ grid-column: span 2; grid-row: span 2; }
+    .b3{ grid-column: span 3; grid-row: span 2; }
+    .b4{ grid-column: span 2; grid-row: span 2; }
+    .b5{ grid-column: span 3; grid-row: span 2; }
+
+    .b6{ grid-column: span 2; grid-row: span 2; }
+    .b7{ grid-column: span 2; grid-row: span 2; }
+    .b8{ grid-column: span 2; grid-row: span 2; }
+    .b9{ grid-column: span 2; grid-row: span 2; }
+
+    .b10{ grid-column: span 6; grid-row: span 4; }
+
+    .b11{ grid-column: span 6; grid-row: span 4; }
+
+    .b12{ grid-column: span 2; grid-row: span 2; }
+    .b13{ grid-column: span 2; grid-row: span 2; }
+    .b14{ grid-column: span 2; grid-row: span 2; }
+    .b15{ grid-column: span 2; grid-row: span 2; }
+        }
